@@ -4,20 +4,18 @@
  * binary_tree-node - creates a binary tree node
  * @parent: pointer to the parent of the created node
  * @value: value to put in the new node
- * 
  * Return: pointer to the new node, NULL or failure
-
 */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
     binary_tree_t *newnode;
 
-    /* Allocate the memory of the new node */
+/* Allocate the memory of the new node */
     new_node = malloc(sizeof(binary_tree_t));
     if (newnode == NULL)
-    {
-            return (NULL);        
-    }
+	{
+		return (NULL);        
+	}
 
     newnode->parent = parent;
     newnode->n = value;
