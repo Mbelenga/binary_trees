@@ -7,7 +7,7 @@
  * Return: pointer to the right child || NULL or failure
  */
 
-binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
 	binary_tree_t *rightchild;
 
