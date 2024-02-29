@@ -2,7 +2,16 @@
 
 /**
  *binary_tree_preorder - A function that goes through a binary tree using preorder traversal
- *
- *
+ *@tree: pointer to the root node
+ *@func: pointer to a function
  */
-void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int)
+void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
+{
+	if (tree == NULL || func == NULL)
+		return;
+	func(tree->n);
+
+	binary_tree_preorder(tree->left, func);
+
+	binary-tre_preorder(tree->right, func);
+}
